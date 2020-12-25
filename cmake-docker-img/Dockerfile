@@ -1,4 +1,4 @@
-FROM gcc-l:latest
+FROM gcc-gdb-locales:latest
 
 WORKDIR /usr/src/cmake.git
 
