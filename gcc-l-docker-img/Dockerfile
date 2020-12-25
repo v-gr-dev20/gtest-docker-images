@@ -1,9 +1,7 @@
 FROM gcc:latest
 
-RUN apt-get update -y \
- && apt-get upgrade -y \
- && apt-get install -y gdb \
- && apt-get install -y locales \
+RUN apt -y update \
+ && apt -y install gdb locales \
  && sed -i -e 's/^# *\(en_US.UTF-8\)/\1/' /etc/locale.gen \
  && sed -i -e 's/^# *\(ru_RU.UTF-8\)/\1/' /etc/locale.gen \
  && locale-gen
