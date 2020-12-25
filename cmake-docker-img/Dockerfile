@@ -4,7 +4,7 @@ WORKDIR /usr/src/cmake.git
 
 RUN apt -y update \
  && apt -y install git \
- && git clone https://gitlab.kitware.com/cmake/cmake.git /usr/src/cmake.git \
+ && git clone https://gitlab.kitware.com/cmake/cmake.git -b v3.19.1 /usr/src/cmake.git \
  && ./bootstrap \
  && make \
  && make install \
