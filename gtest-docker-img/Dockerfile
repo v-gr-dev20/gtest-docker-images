@@ -3,8 +3,8 @@ FROM cmake:latest
 
 WORKDIR /
 
-RUN apt-get update \
- && apt-get install -y libboost-dev libboost-program-options-dev \
+RUN apt -y update \
+ && apt -y install libboost-dev libboost-program-options-dev \
  && git clone https://github.com/google/googletest.git -b release-1.10.0 \
  && cd googletest \
  && mkdir build \
